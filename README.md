@@ -10,7 +10,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 - router is inertia.js
 - mysql is docker container  
 
-## to setup development enviroument
+## to setup development environment
 
 - create .env file using .env.example
 - `composer install` 
@@ -21,5 +21,6 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 - test db connection using `php artisan db:show`
 - for db seed use `php artisan db:seed` 
 - for db refresh : `php artisan migrate:refresh --seed`
-
 - after that `npm run dev` && `php artisan serve`
+
+> see sample.vscode for vscode settings.
