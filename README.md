@@ -8,7 +8,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 - js bundler is vite, 
 - router is inertia.js
-- docker is mysql 
+- mysql is docker container  
 
 ## to setup development enviroument
 
