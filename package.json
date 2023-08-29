@@ -3,6 +3,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
+        "dev-docker": "docker compose up",
+        "dev-artisan": "php artisan serve",
         "fix:eslint": "eslint --ext .js,.vue resources/js/ --fix"
     },
     "devDependencies": {
