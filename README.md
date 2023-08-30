@@ -24,3 +24,11 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 - after that `npm run dev` && `php artisan serve`
 
 > see sample.vscode for vscode settings.
+
+### tips:
+####to create controller
+`php artisan make:controller` `SampleController`
+
+#### to show active routes
+`php artisan route:list`
+
