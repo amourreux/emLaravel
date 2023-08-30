@@ -4,7 +4,7 @@
         "dev": "vite",
         "build": "vite build",
         "dev-docker": "docker compose up",
-        "dev-artisan": "php artisan serve",
+        "dev-all": "php artisan serve & vite",
         "fix:eslint": "eslint --ext .js,.vue resources/js/ --fix"
     },
     "devDependencies": {
