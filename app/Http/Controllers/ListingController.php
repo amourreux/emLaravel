@@ -17,11 +17,17 @@ class ListingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $filters = $request->only([
+            'priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo'
+        ]);
+        $query = Listing::orderByDesc('created_at');
+
         return inertia('Listing/Index',
         [
-            'listings' => Listing::orderByDesc('created_at')->paginate(12) // be aware laravel magic
+            'filters' => $filters,
+            'listings' => $query->latest()->filter($filters)->paginate(12)->withQueryString() // be aware laravel magic paginate & withQueryString
         ]);
     }
 
