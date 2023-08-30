@@ -33,13 +33,13 @@ class DatabaseSeeder extends Seeder
             'password' => 'root',
         ]);
 
-        \App\Models\Listing::factory(10)->create([
+        \App\Models\Listing::factory(30)->create([
             'by_user_id' => 1
         ]);
-        \App\Models\Listing::factory(10)->create([
+        \App\Models\Listing::factory(30)->create([
             'by_user_id' => 2
         ]);
-        \App\Models\Listing::factory(1)->create([
+        \App\Models\Listing::factory(10)->create([
             'by_user_id' => 3
         ]);
     }
