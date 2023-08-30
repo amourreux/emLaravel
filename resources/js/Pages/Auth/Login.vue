@@ -19,11 +19,11 @@
   
 <script setup>
 import { useForm } from '@inertiajs/inertia-vue3'
-import { ZiggyVue } from 'ziggy'
 
 const form = useForm({
   email: null,
   password: null,
 })
-const login = () => form.post(ZiggyVue.route('login.store'))
+// eslint-disable-next-line no-undef
+const login = () => form.post(route('login.store'))
 </script>
