@@ -17,8 +17,13 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/show', [IndexController::class, 'show']);
-Route::resource('listing', ListingController::class);
+Route::get('/show', [IndexController::class, 'show'])->middleware('auth');
+
+Route::resource('listing', ListingController::class)
+  ->only(['create', 'store', 'edit', 'update', 'destroy'])
+  ->middleware('auth');
+Route::resource('listing', ListingController::class)
+  ->except(['create', 'store', 'edit', 'update', 'destroy']);
 
 Route::get('login', [AuthController::class, 'create'])
   ->name('login');
