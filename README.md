@@ -26,9 +26,18 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 > see sample.vscode for vscode settings.
 
 ### tips:
-####to create controller
+
+#### to create controller
 `php artisan make:controller` `SampleController`
 
 #### to show active routes
 `php artisan route:list`
 
+#### to create policy for a model
+`php artisan make:policy ListingPolicy --model=Listing`
+
+# DON'T FORGET TO PLAY with tinker
+`php artisan tinker`
+
+### others
+`php artisan db:list`

@@ -28,13 +28,19 @@ class DatabaseSeeder extends Seeder
             'password' => '123456',
         ]);
         \App\Models\User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-            'password' => '123456',
+            'name' => 'Admin User',
+            'email' => 'admin@email.com',
+            'password' => 'root',
         ]);
 
-        \App\Models\Listing::factory(20)->create([
+        \App\Models\Listing::factory(10)->create([
             'by_user_id' => 1
+        ]);
+        \App\Models\Listing::factory(10)->create([
+            'by_user_id' => 2
+        ]);
+        \App\Models\Listing::factory(1)->create([
+            'by_user_id' => 3
         ]);
     }
 }
